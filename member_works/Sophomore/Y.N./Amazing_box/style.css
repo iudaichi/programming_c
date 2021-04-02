@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#btn-wrap {
+  position: relative;
+}
+.amazing_button {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: #fff;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "New Tegomin", serif;
+  border: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 12px 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: 0 2px rgba(0, 212, 255, 1);
+  height: 20%;
+  position: absolute;
+  top: 50%;
+  right: -50%;
+  transform: translate(-50px, -50px);
+}
+
+.amazing_button:focus {
+  outline: none;
+}
+
+.amazing_button:active {
+  box-shadow: none;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.boxes.big {
+  width: 600px;
+  height: 600px;
+}
+
+.boxes.big .box {
+  transform: rotateZ(-1420deg);
+}
+
+.box {
+  background-image: url("https://cdn.pixabay.com/photo/2018/10/08/14/46/bird-3732867_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  transition: 0.4s ease;
+}
+
+.box::after {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  position: absolute;
+  top: 8px;
+  right: -15px;
+  height: 100%;
+  width: 15px;
+  transform: skewY(45deg);
+}
+
+.box::before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgb(77, 184, 206) 100%
+  );
+  position: absolute;
+  bottom: -15px;
+  left: 8px;
+  height: 15px;
+  width: 100%;
+  transform: skewX(45deg);
+}
+footer {
+  margin-top: 30px;
+  font-size: 9px;
+  width: 100%;
+  text-align: center;
+}
+
+.back {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
